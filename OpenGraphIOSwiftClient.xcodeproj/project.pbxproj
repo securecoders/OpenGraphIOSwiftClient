@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4FA7673A2A83FAD4005EB489 /* OpenGraphIOSwiftClient.docc in Sources */ = {isa = PBXBuildFile; fileRef = 4FA767392A83FAD4005EB489 /* OpenGraphIOSwiftClient.docc */; };
 		4FA767402A83FAD4005EB489 /* OpenGraphIOSwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA767352A83FAD4005EB489 /* OpenGraphIOSwiftClient.framework */; };
 		4FA767452A83FAD4005EB489 /* OpenGraphIOSwiftClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA767442A83FAD4005EB489 /* OpenGraphIOSwiftClientTests.swift */; };
-		4FA767462A83FAD4005EB489 /* OpenGraphIOSwiftClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FA767382A83FAD4005EB489 /* OpenGraphIOSwiftClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FA767512A8400F6005EB489 /* OpenGraphIoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA767502A8400F6005EB489 /* OpenGraphIoClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,10 +24,11 @@
 
 /* Begin PBXFileReference section */
 		4FA767352A83FAD4005EB489 /* OpenGraphIOSwiftClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenGraphIOSwiftClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FA767382A83FAD4005EB489 /* OpenGraphIOSwiftClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGraphIOSwiftClient.h; sourceTree = "<group>"; };
-		4FA767392A83FAD4005EB489 /* OpenGraphIOSwiftClient.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = OpenGraphIOSwiftClient.docc; sourceTree = "<group>"; };
 		4FA7673F2A83FAD4005EB489 /* OpenGraphIOSwiftClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenGraphIOSwiftClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FA767442A83FAD4005EB489 /* OpenGraphIOSwiftClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGraphIOSwiftClientTests.swift; sourceTree = "<group>"; };
+		4FA7674F2A83FF6D005EB489 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4FA767502A8400F6005EB489 /* OpenGraphIoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGraphIoClient.swift; sourceTree = "<group>"; };
+		4FA767522A8404BE005EB489 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +53,8 @@
 		4FA7672B2A83FAD4005EB489 = {
 			isa = PBXGroup;
 			children = (
+				4FA767522A8404BE005EB489 /* README.md */,
+				4FA7674F2A83FF6D005EB489 /* LICENSE */,
 				4FA767372A83FAD4005EB489 /* OpenGraphIOSwiftClient */,
 				4FA767432A83FAD4005EB489 /* OpenGraphIOSwiftClientTests */,
 				4FA767362A83FAD4005EB489 /* Products */,
@@ -71,8 +73,7 @@
 		4FA767372A83FAD4005EB489 /* OpenGraphIOSwiftClient */ = {
 			isa = PBXGroup;
 			children = (
-				4FA767382A83FAD4005EB489 /* OpenGraphIOSwiftClient.h */,
-				4FA767392A83FAD4005EB489 /* OpenGraphIOSwiftClient.docc */,
+				4FA767502A8400F6005EB489 /* OpenGraphIoClient.swift */,
 			);
 			path = OpenGraphIOSwiftClient;
 			sourceTree = "<group>";
@@ -92,7 +93,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FA767462A83FAD4005EB489 /* OpenGraphIOSwiftClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +147,7 @@
 				TargetAttributes = {
 					4FA767342A83FAD4005EB489 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 					4FA7673E2A83FAD4005EB489 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -194,7 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FA7673A2A83FAD4005EB489 /* OpenGraphIOSwiftClient.docc in Sources */,
+				4FA767512A8400F6005EB489 /* OpenGraphIoClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +341,7 @@
 		4FA7674A2A83FAD4005EB489 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -362,6 +364,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -370,6 +373,7 @@
 		4FA7674B2A83FAD4005EB489 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -400,6 +404,7 @@
 		4FA7674D2A83FAD4005EB489 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -415,6 +420,7 @@
 		4FA7674E2A83FAD4005EB489 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
